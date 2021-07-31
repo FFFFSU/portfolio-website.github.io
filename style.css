@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*
+    References:
+    https://aliabdaal.com/
+    https://getflywheel.com/layout/flexbox-create-modern-card-design-layout/
+    https://codepen.io/gaaamii/pen/yLeEvbQ
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #d1e3ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+
+hr {
+    height: 1px;
+    margin: 48px 0;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    cursor: pointer;
+}
+
+.nav-bar-items {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-bar li {
+    padding: 16px 32px;
+}
+
+.nav-bar li a {
+    transition: all 0.3 ease 0s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px;
+}
+
+#profile-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px;
+}
+
+#profile-picture {
+    height: 200px;
+    width: auto;
+}
+
+#bio {
+    padding: 0px 24px;
+}
+
+.title-1 {
+    padding-bottom: 24px;
+    font-size: 48px;
+}
+
+.title-2 {
+    padding: 12px 0px;
+    font-size: 36px;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.experience-card {
+    flex: 0 1 31%;
+    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: #d1e3ff;
+    border-radius: 10px;
+}
+
+#experience-picture {
+    width: auto;
+    height: 120px;
+}
+
+.education-card {
+    margin: 16px 0;
+    padding: 16px 16px;
+    background-color: #d1e3ff;
+    border-radius: 10px;
+}
+
+.social-media {
+    list-style: none;
+    padding: 24px;
+    margin: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #d1e3ff;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 32px;
+    background-color: #d1e3ff;
+}
+
+@media screen and (max-width: 550px) {
+    .nav-bar-items {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    #profile-container {
+        flex-direction: column;
+    }
+    
+    #bio {
+        padding: 16px 0;
+    }
+}
+
+/* @media screen and (max-width: 900px) {
+    .experience-container {
+        justify-content: space-between;
+    }
+    
+    .experience-card {
+        flex: 0 1 47%;
+    }
+} */
+@media screen and (max-width: 900px) {
+    .experience-container {
+        justify-content: center;
+    }
+    
+    .experience-card {
+        flex: 0 1 98%;
+    }
+
+    .social-media {
+        flex-direction: column;
+    }
+    .social-media li {
+        margin: 16px 0px;
+    }
+}
