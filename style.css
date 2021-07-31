@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /*
     References:
@@ -14,17 +14,18 @@
 }
 
 html {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
 }
+
+/* --- Header --- */
 
 header {
     background-color: #d1e3ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    padding: 16px 64px;
 }
 
 hr {
@@ -41,15 +42,15 @@ hr {
 .nav-bar-items {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
 }
 
 .nav-bar li {
-    padding: 16px 32px;
+    padding: 16px;
 }
 
-.nav-bar li a {
-    transition: all 0.3 ease 0s;
+
+.nav-bar-items li a {
+    font-weight: 700;
 }
 
 a {
@@ -57,41 +58,60 @@ a {
     color: black;
 }
 
+/* --- Header --- */
+
 .content {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 64px 32px;
 }
 
 #profile-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 24px 0px;
 }
 
 #profile-picture {
-    height: 200px;
+    max-height: 400px;
     width: auto;
 }
 
 #bio {
-    padding: 0px 24px;
+    margin: 48px;
+}
+
+.social-media-container a {
+    margin-right: 16px;
 }
 
 .title-1 {
-    padding-bottom: 24px;
-    font-size: 48px;
+    margin: 24px 0px;
+    font-size: 4em;
 }
 
 .title-2 {
-    padding: 12px 0px;
-    font-size: 36px;
+    margin: 24px 0;
+    font-size: 2em;
+}
+
+.title-3 {
+    font-size: 1.5em;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    line-height: 1.25;
+    margin: 24px 0;
 }
 
 .description {
-    font-size: 20px;
-    line-height: 1.25;
+    font-size: 1.25em;
 }
 
 .experience-container {
@@ -101,41 +121,51 @@ a {
 }
 
 .experience-card {
-    flex: 0 1 31%;
-    margin-right: 16px;
+    flex: 0 1 22%;
     margin-top: 16px;
     margin-bottom: 16px;
-    padding: 16px;
+    margin-right: 24px;
     background-color: #d1e3ff;
-    border-radius: 10px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+}
+
+.experience-card h1, .experience-card p {
+    margin: 16px;
 }
 
 #experience-picture {
-    width: auto;
-    height: 120px;
+    height: auto;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.education-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .education-card {
-    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    flex: 0 1 45%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 24px;
     padding: 16px 16px;
     background-color: #d1e3ff;
     border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
 
-.social-media {
-    list-style: none;
-    padding: 24px;
-    margin: 16px 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: #d1e3ff;
-    border-radius: 10px;
+.education-picture {
+    height: auto;
+    width: 100px;
 }
 
-footer {
-    text-align: center;
-    padding: 32px;
-    background-color: #d1e3ff;
+.education-info {
+    margin-left: 16px;
 }
 
 @media screen and (max-width: 550px) {
@@ -156,30 +186,29 @@ footer {
     #bio {
         padding: 16px 0;
     }
-}
 
-/* @media screen and (max-width: 900px) {
-    .experience-container {
-        justify-content: space-between;
-    }
-    
-    .experience-card {
-        flex: 0 1 47%;
-    }
-} */
-@media screen and (max-width: 900px) {
-    .experience-container {
-        justify-content: center;
-    }
-    
     .experience-card {
         flex: 0 1 98%;
     }
+    .education-card {
+        flex: 0 1 98%;
+    }
+}
 
-    .social-media {
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+    #profile-container {
         flex-direction: column;
     }
-    .social-media li {
-        margin: 16px 0px;
+    .experience-card {
+        flex: 0 1 45%;
+    }
+    .education-card {
+        flex: 0 1 98%;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .experience-card {
+        flex: 0 1 30%;
     }
 }
