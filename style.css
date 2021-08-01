@@ -21,7 +21,7 @@ html {
 /* --- Header --- */
 
 header {
-    background-color: #0e76a8;
+    background-color: #0072b1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,7 +83,7 @@ a {
 }
 
 #name {
-    color: #0e76a8;
+    color: #0072b1;
 }
 
 .social-media-container a {
@@ -101,7 +101,7 @@ a {
 }
 
 .title-3 {
-    color: #0e76a8;
+    color: #0072b1;
     font-size: 1.5em;
 }
 
