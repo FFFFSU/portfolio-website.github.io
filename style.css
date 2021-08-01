@@ -21,7 +21,7 @@ html {
 /* --- Header --- */
 
 header {
-    background-color: #d1e3ff;
+    background-color: #8fb4ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +45,7 @@ hr {
 }
 
 .nav-bar li {
-    padding: 16px;
+    padding: 16px 32px;
 }
 
 
@@ -70,7 +70,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 0px;
+    margin-top: 64px;
 }
 
 #profile-picture {
@@ -79,7 +79,7 @@ a {
 }
 
 #bio {
-    margin: 48px;
+    margin-left: 96px;
 }
 
 .social-media-container a {
@@ -92,7 +92,7 @@ a {
 }
 
 .title-2 {
-    margin: 24px 0;
+    margin-bottom: 48px;
     font-size: 2em;
 }
 
@@ -125,7 +125,7 @@ a {
     margin-top: 16px;
     margin-bottom: 16px;
     margin-right: 24px;
-    background-color: #d1e3ff;
+    background-color: #8fb4ff;
     border-radius: 16px;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
@@ -154,7 +154,7 @@ a {
     margin-bottom: 16px;
     margin-right: 24px;
     padding: 16px 16px;
-    background-color: #d1e3ff;
+    background-color: #8fb4ff;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
@@ -162,6 +162,7 @@ a {
 .education-picture {
     height: auto;
     width: 100px;
+    border-radius: 10px;
 }
 
 .education-info {
@@ -184,6 +185,7 @@ a {
     }
     
     #bio {
+        margin: 16px;
         padding: 16px 0;
     }
 
@@ -198,6 +200,10 @@ a {
 @media screen and (min-width: 701px) and (max-width: 1000px) {
     #profile-container {
         flex-direction: column;
+    }
+    #bio {
+        margin: 16px;
+        padding: 16px 0;
     }
     .experience-card {
         flex: 0 1 45%;
