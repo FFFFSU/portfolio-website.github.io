@@ -5,6 +5,11 @@
     https://aliabdaal.com/
     https://getflywheel.com/layout/flexbox-create-modern-card-design-layout/
     https://codepen.io/gaaamii/pen/yLeEvbQ
+
+    Images
+    https://kerjalepas.com/doodle-art/
+    https://www.kamloopsthisweek.com/community/kamloops-art-page-1.24212556
+    https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGFydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80
 */
 
 * {
@@ -12,6 +17,7 @@
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* --- Header --- */
@@ -21,13 +27,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 64px;
 }
 
 .logo {
     height: 70px;
     width: auto;
     cursor: pointer;
+    margin: 24px 24px;
 }
 
 .nav-bar-items {
@@ -52,20 +58,20 @@ a {
 /* --- Header --- */
 
 .content {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 64px 32px;
+    padding: 0px 32px;
 }
 
 #profile-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 64px;
+    margin: 64px 0px;
 }
 
 #profile-picture {
-    max-height: 400px;
+    max-height: 300px;
     width: auto;
 }
 
@@ -83,57 +89,106 @@ a {
 
 .title-1 {
     margin: 24px 0px;
-    font-size: 4em;
+    font-size: 2.5em;
+    font-weight: 700;
 }
 
 .title-2 {
-    margin-bottom: 48px;
-    font-size: 2em;
+    margin-left: 1.5%;
+    font-size: 1.5em;
+    color: #162783;
+    font-weight: 700;
 }
 
 .title-3 {
     color: #162783;
-    font-size: 1.5em;
+    font-size: 1.25em;
+    font-weight: 700;
 }
 
-.bold {
-    font-weight: 600;
+.title-4 {
+    font-size: 1em;
+    margin: 8px 0px;
 }
 
 .subtitle {
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 1.25;
     margin: 24px 0;
 }
 
 .description {
-    font-size: 1.25em;
+    line-height: 1.25;
 }
 
-.experience-container {
+hr {
+    margin: 32px 1.5%;
+}
+
+.skill-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.skill-card {
+    flex: 0 1 22%;
+    padding: 16px;
+    background-color: white;
+    margin: 16px 1.5%;
+    border-radius: 16px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+}
+
+.skill-picture {
+    height: auto;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.skill-title {
+    text-align: center;
+    font-weight: 700;
+    color: #162783;
+}
+
+.portfolio-container {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.experience-card {
-    flex: 0 1 22%;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-right: 24px;
+.portfolio-card {
+    flex: 0 1 97%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 1.5%;
     background-color: white;
     border-radius: 16px;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
 
-.experience-card h1, .experience-card p {
-    margin: 16px;
+.portfolio-card div {
+    width: 70%;
+    margin-left: 16px;
 }
 
-#experience-picture {
-    height: auto;
-    width: 100%;
+#portfolio-picture {
+    height: 170px;
+    width: 30%;
     border-radius: 16px;
+    object-fit: cover;
+}
+
+.experience-card {
+    background-color: gray;
+    margin: 16px 1.5%;
+    padding: 16px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
 
 .education-container {
@@ -143,12 +198,8 @@ a {
 }
 
 .education-card {
-    display: flex;
-    align-items: center;
-    flex: 0 1 45%;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-right: 24px;
+    flex: 0 1 30%;
+    margin: 16px 1.5%;
     padding: 16px 16px;
     background-color: white;
     border-radius: 10px;
@@ -185,8 +236,20 @@ a {
         padding: 16px 0;
     }
 
-    .experience-card {
-        flex: 0 1 98%;
+    .skill-card {
+        flex: 0 1 47%;
+    }
+    .portfolio-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .portfolio-info {
+        width: 100%;
+        margin: 16px;
+    }
+    #portfolio-picture {
+        width: 100%;
+        height: auto;
     }
     .education-card {
         flex: 0 1 98%;
@@ -194,6 +257,9 @@ a {
 }
 
 @media screen and (min-width: 701px) and (max-width: 1000px) {
+    header {
+        flex-direction: column;
+    }
     #profile-container {
         flex-direction: column;
     }
@@ -201,16 +267,13 @@ a {
         margin: 16px;
         padding: 16px 0;
     }
-    .experience-card {
-        flex: 0 1 45%;
-    }
-    .education-card {
-        flex: 0 1 98%;
+    .skill-card {
+        flex: 0 1 30%;
     }
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1200px) {
-    .experience-card {
+    .skill-card {
         flex: 0 1 30%;
     }
 }
