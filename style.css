@@ -11,26 +11,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
     font-family: "Roboto", sans-serif;
-    scroll-behavior: smooth;
 }
 
 /* --- Header --- */
 
 header {
-    background-color: #0072b1;
+    background-color: #162783;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 64px;
-}
-
-hr {
-    height: 1px;
-    margin: 48px 0;
 }
 
 .logo {
@@ -83,7 +74,7 @@ a {
 }
 
 #name {
-    color: #0072b1;
+    color: #162783;
 }
 
 .social-media-container a {
@@ -101,7 +92,7 @@ a {
 }
 
 .title-3 {
-    color: #0072b1;
+    color: #162783;
     font-size: 1.5em;
 }
 
