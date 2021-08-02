@@ -7,6 +7,7 @@
     https://codepen.io/gaaamii/pen/yLeEvbQ
 
     Images
+    https://unsplash.com/photos/2LowviVHZ-E
     https://kerjalepas.com/doodle-art/
     https://www.kamloopsthisweek.com/community/kamloops-art-page-1.24212556
     https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGFydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80
@@ -27,13 +28,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .logo {
-    height: 70px;
     width: auto;
     cursor: pointer;
-    margin: 24px 24px;
+    margin: 12px 24px;
+    padding: 8px 16px;
+    background-color: white;
+    color: #162783;
+    font-size: 2em;
+    border-radius: 50%;
 }
 
 .nav-bar-items {
@@ -67,12 +75,13 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 64px 0px;
+    padding-top: 140px;
+    margin: 0 1.5%;
 }
 
 #profile-picture {
-    max-height: 300px;
-    width: auto;
+    height: 200px;
+    object-fit: cover;
 }
 
 #bio {
@@ -217,8 +226,15 @@ hr {
 }
 
 @media screen and (max-width: 550px) {
+    header {
+        position: static;
+    }
+
     .nav-bar-items {
         flex-direction: column;
+    }
+    #profile-container {
+        padding-top: 32px;
     }
 }
 
@@ -262,6 +278,7 @@ hr {
     }
     #profile-container {
         flex-direction: column;
+        padding-top: 170px;
     }
     #bio {
         margin: 16px;
