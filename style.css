@@ -238,6 +238,7 @@ footer {
     }
     .nav-bar-items {
         flex-direction: column;
+        text-align: center;
     }
     #profile-container {
         padding-top: 32px;
@@ -291,11 +292,5 @@ footer {
 @media screen and (min-width: 1001px) and (max-width: 1200px) {
     .skill-card {
         flex: 0 1 30%;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .content {
-         background-color: blue;
     }
 }
