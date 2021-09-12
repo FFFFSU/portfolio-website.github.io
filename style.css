@@ -272,6 +272,8 @@ footer {
     }
 }
 
+/* test */
+
 @media screen and (min-width: 701px) and (max-width: 1000px) {
     header {
         flex-direction: column;
