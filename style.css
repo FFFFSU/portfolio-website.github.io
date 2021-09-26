@@ -19,8 +19,6 @@
     scroll-behavior: smooth;
 }
 
-/* --- Header --- */
-
 header {
     background-color: #162783;
     display: flex;
@@ -234,7 +232,6 @@ footer {
     
     #bio {
         margin: 16px;
-        padding: 16px 0;
     }
 
     .skill-card {
@@ -256,30 +253,5 @@ footer {
     }
     .education-card {
         flex: 0 1 97%;
-    }
-}
-
-/* test */
-
-@media screen and (min-width: 701px) and (max-width: 1000px) {
-    header {
-        flex-direction: column;
-    }
-    #profile-container {
-        flex-direction: column;
-        padding-top: 170px;
-    }
-    #bio {
-        margin: 16px;
-        padding: 16px 0;
-    }
-    .skill-card {
-        flex: 0 1 30%;
-    }
-}
-
-@media screen and (min-width: 1001px) and (max-width: 1200px) {
-    .skill-card {
-        flex: 0 1 30%;
     }
 }
